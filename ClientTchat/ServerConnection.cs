@@ -18,6 +18,7 @@ namespace ClientTchat
         public StreamWriter Writer { get; private set; }
 
         private static ServerConnection currentConnection { get; set; }
+        private static object _lock = new object();
         
         public ServerConnection(string host, int port, string username)
         {
@@ -37,6 +38,14 @@ namespace ClientTchat
             catch
             {
                 Client = null;
+            }
+        }
+
+        public static ServerConnection GetCurrentConnection()
+        {
+            lock (_lock)
+            {
+                return currentConnection;
             }
         }
 

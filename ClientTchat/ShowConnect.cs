@@ -19,6 +19,9 @@ namespace ClientTchat
 
         private void buttonconnect_Click(object sender, EventArgs e)
         {
+            if (usernamebox.Text == null)
+                usernamebox.Text = "Default";
+
             ServerConnection connection = new ServerConnection("127.0.0.1", 4096, usernamebox.Text);
             new ChatForm().Show();
             Hide();

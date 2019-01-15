@@ -35,6 +35,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBox1.Location = new System.Drawing.Point(12, 12);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(444, 215);
@@ -55,8 +56,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 47);
             this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
+            this.button2.Text = "Send";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ChatForm
             // 
@@ -68,6 +70,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Name = "ChatForm";
             this.Text = "ChatForm";
+            this.Shown += new System.EventHandler(this.ChatForm_Shown);
             this.ResumeLayout(false);
 
         }

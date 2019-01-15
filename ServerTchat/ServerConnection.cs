@@ -32,6 +32,13 @@ namespace ServerTchat
                 {
                     line = null;
                 }
+
+                ChatMessage chatMessage = new ChatMessage(Client, line);
+
+                //if(chatMessage.Valid())
+                //{
+                    chatMessage.Handle();
+                //}
             }
         }
 

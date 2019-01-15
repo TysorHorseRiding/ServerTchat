@@ -52,6 +52,7 @@
     <Compile Include="ChatForm.Designer.cs">
       <DependentUpon>ChatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChatMessage.cs" />
     <Compile Include="ServerConnection.cs" />
     <Compile Include="ShowConnect.cs">
       <SubType>Form</SubType>
